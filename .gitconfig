@@ -1,0 +1,27 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Jonathan Davila
+	email = jdavila@redhat.com
+[push]
+	default = simple
+[user]
+	name = Jonathan Davila
+	email = jdavila@redhat.com
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+[core]
+	editor = vim
+	autocrlf = input
+[branch]
+	autosetuprebase = always
+[alias]
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	fl = log -u
+	dl = "!git ll -1"
+	dlc = diff --cached HEAD^
+	lol = log --pretty=oneline --abbrev-commit --graph --decorate
+
